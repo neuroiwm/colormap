@@ -1,7 +1,10 @@
-function col_out = generateColormap(col,flag_int)
+function col_out = generateColormap(col,flag_int,n)
 %% col_out = generateColormap(col[num_col,3])
+if ~exist('n','var')
+    n = 255;
+end
 num_col = size(col,1);
-num_bin = 255/num_col;
+num_bin = n/num_col;
 col_out = zeros(num_bin*num_col,3);
 if ~exist('flag_int','var')
     flag_int = 1;

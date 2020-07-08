@@ -27,6 +27,8 @@ for i_col = 1 : size(col,1)
     f = imagesc(f);
     hold on;
     tmpcol = [1,1,1;col(i_col,:)];
+%     tmpcol = [0,0,0;col(i_col,:)];
+
     col_out = generateColormap(tmpcol);
     set(a,'Colormap',col_out);
     axis ij; axis off; colorbar
