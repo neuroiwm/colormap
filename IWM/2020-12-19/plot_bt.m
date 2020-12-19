@@ -4,6 +4,7 @@ num_line    = size(y,2);
 struct_line = struct;
 lines       = plot(x,y);
 colors_orig = cat(1,lines(:).Color);
+
 struct_line.color = colors_orig;
 struct_line.line  = lines;
 struct_line.gr    = gr;

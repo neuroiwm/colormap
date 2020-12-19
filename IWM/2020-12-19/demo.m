@@ -7,6 +7,7 @@ sig = [cos(2*pi*f1*(repmat(t,[N,1])+pi*randn(N,1))).*sin(2*pi*f2*(repmat(t,[N,1]
 sig = sig.*rand(1,size(sig,2));
 
 %
+
 %% conventional
 figure;
 a= plot(t,sig,'LineWidth',1);
