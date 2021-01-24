@@ -1,0 +1,18 @@
+column  = 50;
+row     = 30;
+mat     = rand(row,column);
+
+
+figure;
+% pbaspect([1 1 1]);
+imagesc(mat);
+hold on;
+for i_c = 1 : row
+    plot([0 column+0.5],[i_c-0.5 i_c-0.5],'LineWidth',2,'Color','k');
+end
+
+for i_r = 1 : column
+    plot([i_r-0.5 i_r-0.5],[0-0.5 row+0.5],'LineWidth',2,'Color','k');
+end
+
+axis off
