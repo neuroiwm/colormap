@@ -1,8 +1,9 @@
-column  = 20;
-row     = 10;
+column  = 15;
+row     = 15;
 mat     = rand(row,column);
 
-figure;
+f = figure;
+set(f,'Position',[440 378 420 420]);
 pbaspect([1 1 1]);
 imagesc(mat);
 hold on;
@@ -13,7 +14,6 @@ end
 for i_r = 1 : column+1
     plot([i_r-0.5 i_r-0.5],[0-0.5 row+0.5],'LineWidth',2,'Color','k');
 end
-
 axis off
 % set(gcf,'Color','none');
 % set(gca,'Color','none');
