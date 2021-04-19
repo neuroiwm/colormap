@@ -1,4 +1,4 @@
-column  = 15;
+column  = 5;
 row     = 15;
 mat     = rand(row,column);
 
@@ -18,9 +18,18 @@ axis off
 % set(gcf,'Color','none');
 % set(gca,'Color','none');
 % set(gcf,'InvertHardcopy','off')
+varlist={'jet';'hot';'bone';'gray';'copper';'cool'};
+return
+%%
 
-varlist={'jet';'hot';'bone';'gray';'copper'};
 for i_var = 1 : numel(varlist)
     eval(sprintf('colormap(%s)',varlist{i_var}));
     saveas(gcf,sprintf('img_%s',varlist{i_var}),'jpg');
 end
+
+%% original
+w = [1 1 1];
+b = [2	161	255]/255;
+
+cmap = generateColormap([w;b],1,255);
+colormap(cmap)
